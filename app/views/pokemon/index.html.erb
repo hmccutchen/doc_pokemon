@@ -1,0 +1,23 @@
+
+
+
+
+<div class="container">
+	<img  class="pokedex" src="https://wallpapercave.com/wp/wp3170171.png" alt="">	
+    <%= image_tag(@poke_data["sprites"]["front_default"],class: "pokemon") %>
+ <p class="pokemon-text"><%= @res["results"][0]["name"].capitalize %></p>
+<div>
+<%= link_to "Previous", pokemon_index_path(page: @page - 1), class: "arrows"  %>
+<%= link_to "Next", pokemon_index_path(page: @page + 1), class: "arrows right" %>
+</div>
+</div>
+
+ <div class="poke-details">
+ <p class="details"><b> Hp:</b> <%= @poke_data["stats"][5]["base_stat"]%></p>
+ <p class="details"> <b>Attack:</b> <%= @poke_data["stats"][4]["base_stat"] %></p>
+ <p class="details"> <b>Defense:</b> <%= @poke_data["stats"][3]["base_stat"] %></p>
+ <span><b> Abilities:</b> </span><br>
+ <% @poke_data["abilities"].each do |ability| %>
+   <span class="details"><%= ability["ability"]["name"]%> </span><br>
+   <% end %>
+ </div>

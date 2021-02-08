@@ -13,3 +13,49 @@
  *= require_tree .
  *= require_self
  */
+
+
+
+.pokedex{
+
+position: absolute;
+width: 32%;
+left: 35%;
+bottom: -7%;
+
+}
+
+.pokemon{
+position: absolute;
+margin-left: 38%;
+margin-top: 19%;
+width: 148px;
+}
+
+ .pokemon-text{
+ position: absolute;
+margin-left: 39%;
+margin-top: 28%;
+font-size: 39px;
+ }
+.arrows{
+position: absolute;
+left: 47%;
+top: 73%;
+font-size: 20px;
+}
+
+.arrows.right{
+	    margin-left: 100px;
+}
+.poke-details{
+position: absolute;
+margin-left: 55%;
+top: 50%;
+margin-top: -9%;
+z-index: 2;
+}
+
+.details{
+	text-decoration: underline;
+}
